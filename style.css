@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+html {
+    overflow-x: hidden;
+}
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+nav {
+    background-color: rgba(44, 44, 44, 1);
+    transition: background-color 0.5s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+nav.transparent {
+    background-color: rgba(44, 44, 44, 0.5);
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.2rem;
+    align-items: center;
+}
+nav div img {
+    width: 70px;
+    transition: transform 0.3s;
+}
+nav div img:hover {
+    transform: scale(1.1);
+}
+nav ul li a {
+    font-weight: 500;
+    color: #fff;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: #4db8ff;
+    border-bottom: 2px solid #4db8ff;
+    letter-spacing: 5px;
+}
+.menu-icon {
+    font-size: 24px;
+    display: none;
+    color: white;
+    cursor: pointer;
+}
+.home {
+    background-image: url('img/LATAR-IDN-BS.jpg');
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.center {
+    color: #fff;
+}
+.center .title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #4db8ff;
+}
+.center .next {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+.center .button {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.center .button a button {
+    height: 50px;
+    width: 150px;
+    border-radius: 8px;
+    margin: 5px;
+    border: 2px solid #fff;
+    background-color: #4db8ff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.3s;
+}
+.center .button a button:hover {
+    background: transparent;
+    color: #4db8ff;
+}
+.container {
+    width: 100%;
+    padding: 3rem 5%;
+    background: #e0f7fa;
+}
+.profile h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #4db8ff;
+    text-align: center;
+}
+.container span {
+    color: #4db8ff;
+    cursor: pointer;
+}
+.container-vocational,
+.container-activity {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.services-box, 
+.container-activity .box {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+.services-box:hover, 
+.container-activity .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    border-color: #ff4081;
+}
+.services-box h3,
+.container-activity .box h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+.services-box p,
+.container-activity .box p {
+    font-size: 0.9rem;
+    color: #666;
+}
+.container-contact {
+    margin-top: 2rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #4db8ff;
+}
+.container-contact2 {
+    background: linear-gradient(135deg, #81d4fa, #4db8ff);
+    padding: 3rem;
+    text-align: center;
+    color: white;
+}
+.container-contact2 h2 span {
+    color: #ff4081;
+}
+.container-contact2 form {
+    max-width: 60rem;
+    margin: 2rem auto;
+}
+.container-contact2 input,
+.container-contact2 textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    background: #e0f7fa;
+    border-radius: 8px;
+    border: none;
+}
+.container-contact2 .btn {
+    height: 45px;
+    width: 150px;
+    border-radius: 8px;
+    background: white;
+    color: #4db8ff;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.container-contact2 .btn:hover {
+    background: #4db8ff;
+    color: white;
+}
+.footer-text {
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .center {
+        padding: 0 1rem;
+    }
+    .center .title {
+        font-size: 2rem;
+    }
+    .services-box,
+    .container-activity .box {
+        flex: 1 1 100%;
+    }
+    .container-contact2 form {
+        padding: 1rem;
+    }
+}
